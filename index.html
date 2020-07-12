@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" contect="IE=edge">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <title>Giphy Cat</title>
         
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css">
@@ -15,11 +17,27 @@
 
     <body>
         <header>
-
+            <div class="container">
+                <a href="index.html">
+                    <img src="images/flex_cat_logo.png" alt="Gify Cat Logo" loading="lazy">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Memes</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <section>
-
+                <div class="container">
+                    <h1>Giphy Cat Search</h1>
+                    <Label for="gifInput">Search all the GIFs</Label>
+                    <input type="text" id="gifInput" placeholder="Find all the GIFs" />
+                    <button id="searchBtn">SEARCH GIPHY</button>
+                </div>
             </section>
         </main>
         <footer>

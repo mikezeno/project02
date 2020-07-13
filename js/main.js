@@ -11,10 +11,14 @@ $(document).ready(function () {
         var params = $("#searchForm").serialize(); 
         var req = url + params + "&limit=8";
         console.log("calling... " + req );
+
+        // Call to server
         $.ajax({
             type: "GET",
             url: req
         })
+
+        // Successful response
         .done( function(response) {
             console.log("Response data:", response);
             var gifs = response.data;

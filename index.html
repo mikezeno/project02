@@ -23,19 +23,36 @@
 
         <!-- Navigation bar -->
         <header>
-            <div class="container">
-                <a class="logo" href="index.html">
-                    <img src="images/flex_cat_logo.png" alt="Gify Cat Logo">
-                </a>
-                <h1 class="logo-name" >GIPHY CAT</h1>
+            <div class="container d-flex align-items-center">
                 <nav class="navbar navbar-expand-lg">
-                    <ul>
-                        <li><a href="index.html" class="active">Search</a></li>
-                        <li><a href="#" >Memes</a></li>
-                        <li><a href="#" >About</a></li>
-                    </ul>
+                    <!-- Nav Header -->
+                    <div class="navbar-header justify-content-start">
+                        <a class="navbar-brand logo" href="index.html">
+                            <img src="images/flex_cat_logo.png" alt="Gify Cat Logo">
+                        </a>
+                        
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Nav Links -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a href="index.html" aria-haspopup="true" class="nav-link">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" aria-haspopup="true" class="nav-link">Memes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" aria-haspopup="true" class="nav-link">About</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-            </div>
+             </div>
         </header>
 
         <main>

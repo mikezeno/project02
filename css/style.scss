@@ -10,3 +10,135 @@ $darkGrey: #1A1A1A !default;
 $text-color: $white !default;
 $link-color: $purple !default;
 
+/* Change all elements to use border-box */
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Base Styles*/
+body {
+    color: $white;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background-color: black;
+}
+h1, h2, h3 {
+    font-weight: bold;
+}
+a {
+    font-weight: bold;
+}
+
+/*Header*/
+header {
+    background: #1A1A1A;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background: #1A1A1A;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-shrink: none;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    width: 300px;
+    height: 100px;
+    display: flex;
+}
+
+.logo-name {
+    float: left;
+    position: relative;
+    display: flex;    
+    top: 1.5rem;
+    /*left: -12rem; */
+}
+.logo img {
+    height: 100%;
+}
+
+/* Navigation */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 5rem;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+} 
+
+a:active {
+    color: $purple;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: $purple;
+}
+
+.row {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.active { 
+    color: $purple; 
+}
+
+#gifOutput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.mediaImg {
+    width:300px;
+    max-height: 200px;
+    margin: 0.5rem;
+}
+
+/* .box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+} */

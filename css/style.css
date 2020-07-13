@@ -30,6 +30,15 @@ header {
     align-items: center;
 }
 
+footer {
+    background: #1A1A1A;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
 header::after {
     content: '';
     display: table;
@@ -46,6 +55,10 @@ header::after {
 
 .logo-name {
     float: left;
+    position: relative;
+    display: flex;    
+    top: 1.5rem;
+    /*left: -12rem; */
 }
 .logo img {
     height: 100%;
@@ -81,23 +94,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-#gifOutput {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* .box {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-} */
-
-.media img {
-    width:300px;
-    height: auto;
-}
-
 .btn {
     background-color: #6034B2;
 }
@@ -106,3 +102,27 @@ nav a:hover {
     padding-top: 2em;
     padding-bottom: 1em;
 }
+
+.active { 
+    color: #6034B2; 
+}
+
+#gifOutput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.mediaImg {
+    width:300px;
+    max-height: 200px;
+    margin: 0.5rem;
+}
+
+/* .box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+} */

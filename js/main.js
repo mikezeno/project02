@@ -24,7 +24,7 @@ $(document).ready(function () {
             var gifs = response.data;
             var gif = "";
             for (i in gifs){
-                gif += '<img src="'+ gifs[i].images.original.url +'" alt="' + gifs[i].title + '"/>\n';
+                gif += '<img class="mediaImg" src="'+ gifs[i].images.original.url +'" alt="' + gifs[i].title + '"/>\n';
             };
 
             $("#gifOutput").html(gif);

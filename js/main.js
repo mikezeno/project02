@@ -4,28 +4,26 @@ $(document).ready(function () {
 
     $("#searchGifs").click(function (event) {
 
-        event.preventDefault();
-        var url = "http://api.giphy.com/v1/gifs/search?"
-        var params = $("#searchForm").serialize(); //serialized portion of your code *see Ajax example
-        var req = url + params + "&limit=10";
-        console.log("calling... " + req )
-        $.ajax( {
-            url: req,
+        //prevents page from reloading on ajax call
+        event.preventDefault(); 
+        
+        var url = "http://api.giphy.com/v1/gifs/search?";
+        var params = $("#searchForm").serialize(); 
+        var req = url + params + "&limit=8";
+        console.log("calling... " + req );
+        $.ajax({
             type: "GET",
+            url: req
         })
-        .then( function(response) {
-            $.each(response.data, function (i, obj) {
-                console.log("index", i, "obj", obj)
+        .done( function(response) {
+            console.log("Response data:", response);
+            var gifs = response.data;
+            var gif = "";
+            for (i in gifs){
+                gif += '<img src="'+ gifs[i].images.original.url +'" alt="' + gifs[i].title + '"/>\n';
+            };
 
-                let gifUrl = obj.images.original.url;
-                let title = obj.title;
-                // var gif = "";
-                // gif += `<span><img src="${gifUrl}" alt="${title}" /></span>`
-                $("#gifOutput").html(`<span><img src="${gifUrl}" alt="${title}" /></span>`);
-    
-             });
-        }), function(err) {
-            alert(err);
-        }
-    })
+            $("#gifOutput").html(gif);
+        });
+    });
 });

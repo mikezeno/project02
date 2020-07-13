@@ -1,0 +1,114 @@
+/* Change all elements to use border-box */
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Base Styles*/
+body {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background-color: black;
+}
+h1, h2, h3 {
+    font-weight: bold;
+}
+a {
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Header*/
+header {
+    background: #1A1A1A;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    overflow: hidden;
+      display: flex;
+  align-items: center;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    /* @include small-and-above {
+        width: auto;
+        height: 50px;
+        margin-right: auto;
+    } */
+}
+
+.logo-name {
+    float: left;;
+}
+.logo img {
+    height: 100%;
+}
+
+/* Navigation */
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 5rem;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+} 
+
+nav a:active {
+    color: #6034B2;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#gifOutput {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+} */
+
+.media img {
+    width:300px;
+    height: auto;
+}

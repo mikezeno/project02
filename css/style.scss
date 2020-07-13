@@ -1,0 +1,23 @@
+@import "normalize";
+
+/*Variables*/
+$purple: #8DC63F !default;
+$black: #000000 !default;
+$white: #FFFFFF !default;
+$lightGrey: #F0F0F0 !default;
+$darkGrey: #1A1A1A !default;
+
+$text-color: $white !default;
+$link-color: $purple !default;
+
+
+/*Theme Styles*/
+.background-primary {
+    background: #000000;
+}
+    .background-secondary {
+background: #1A1A1A;
+}
+    .background-tertiary {
+background: #2A2A2A;
+}  

@@ -37,6 +37,10 @@ footer {
     overflow: hidden;
     display: flex;
     align-items: center;
+    flex-shrink: none;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 header::after {

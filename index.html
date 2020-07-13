@@ -21,15 +21,16 @@
 
         <header>
             <div class="container">
-                <a href="index.html">
+                <a class="logo" href="index.html">
                     <img src="images/flex_cat_logo.png" alt="Gify Cat Logo">
+                    
                 </a>
                 <h1>GIPHY CAT</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Memes</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="index.html" class="active">Search</a></li>
+                        <li><a href="#" >Memes</a></li>
+                        <li><a href="#" >About</a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,11 +39,11 @@
         <main>
             <section>
                 <div class="container">
+                    <h2>Search all of GIPHY</h2>
                     <form id="searchForm">
-                        <Label for="gifInput">Search all the GIFs</Label>
-                        <input id="searchText" type="text" name="q" placeholder="Find all the GIFs" />
+                        <input id="searchText" type="text" name="q" placeholder="Find GIFs" required/>
                         <input type="hidden" name="api_key" value="Lskki5W009AJVCqf655uJTsW2SPDr8dd"/>
-                        <button type="submit" id="searchGifs">SEARCH GIPHY</button>    
+                        <button type="submit" id="searchGifs">SEARCH</button>    
                     </form>
                 </div>
             </section>

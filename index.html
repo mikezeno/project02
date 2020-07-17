@@ -7,11 +7,11 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1">
 
         <title>Giphy Cat</title>
-        
+
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-
+        
         <!-- Favicon -->
         <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
@@ -25,13 +25,22 @@
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <!-- Nav Header -->
+
+                    <!-- Nav Logo -->
                     <div class="navbar-header">
-                        <a class="logo" href="index.html">
-                            <img src="images/flex_cat_logo.png" alt="Gify Cat Logo">
+                        <a  href="index.html">
+                            <svg height="200" width="400">
+                                <defs>
+                                    <clipPath id="image">
+                                         <circle id="logoCircle" cx="75" cy="100" r="60" />
+                                    </clipPath>
+                                </defs>
+                                <image id="logoImg" xlink:href="images/flex_cat_logo.png" clip-path="url(#image)"></image>
+                                <text id="logoTitle" x="150" y="110">GIPHY CAT</text>
+                            </svg>
                         </a>
-                        <h1 class="logo-name">GIPHY CAT</h1>
                     </div>
+
                     <!-- Toggle button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -78,35 +87,42 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <button class="btn btn-dark btn-lg btn-block" type="submit" id="searchGifs">SEARCH</button>    
+                                        <button class="btn btn-dark btn-lg btn-block" type="button" id="searchGifs">SEARCH</button>
                                     </div>
                                 </div>
-                            </form>             
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- Output Area -->
             <section>
                 <div class="container">
-                    <div class="row justify-content-around">
-                        <div class="menuCol col-4 col-sm-6">
-                        </div>
 
+                    <!-- Number of GIFs -->
+                    <div class="row justify-content-center">
+                        <h3><span id="numGifs"></span></h3>
                     </div>
-                    <div id="gifOutput"></div>
+
+                    <!-- GIF Results -->
+                    <div class="row justify-content-around">
+                        <div >
+                            <div id="gifOutput"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
-        
+
         <footer>
-            <div class="container">
+            <div class="footer container-fluid">
                 <div class="row justify-content-center">
                     <img src="images/Poweredby.png" alt="Powered by GIPHY">
                 </div>
-
             </div>
         </footer>
 
     </body>
-    
+
 </html>

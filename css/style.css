@@ -3,6 +3,8 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -404,10 +406,16 @@ textarea {
   /* 2 */
 }
 
+/* Extra Small Only */
+/* Small Devices*/
+/* Medium devices */
 /*Variables*/
 /* Change all elements to use border-box */
 html {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -417,9 +425,12 @@ html {
 /*Base Styles*/
 body {
   color: #FFFFFF;
-  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Prompt', sans-serif;
   font-weight: normal;
-  background-color: black;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 h1, h2, h3 {
@@ -442,15 +453,14 @@ header {
 
 footer {
   background: #1A1A1A;
-  padding-top: 1rem;
   padding-bottom: 1rem;
-  overflow: hidden;
-  display: flex;
+  margin-top: 5rem;
   align-items: center;
-  flex-shrink: none;
   bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
   position: absolute;
-  width: 100%;
 }
 
 header::after {
@@ -459,24 +469,20 @@ header::after {
   clear: both;
 }
 
+#logoCircle {
+  fill: #000000;
+}
+
 /* Logo */
-.logo {
-  float: left;
-  width: 300px;
-  height: 100px;
-  display: flex;
+#logoImg {
+  width: 150px;
+  height: 200px;
 }
 
-.logo-name {
-  float: left;
-  position: relative;
-  display: flex;
-  top: 1.5rem;
-  /*left: -12rem; */
-}
-
-.logo img {
-  height: 100%;
+#logoTitle {
+  font-size: 2rem;
+  font-family: 'Coda Caption', sans-serif;
+  fill: #FFFFFF;
 }
 
 /* Navigation */
@@ -493,15 +499,15 @@ nav li {
 }
 
 nav a {
-  color: white;
   text-align: center;
   padding: 1rem 1rem;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 25px;
+  color: #FFFFFF;
 }
 
-a:active {
+nav a:active {
   color: #6034B2;
 }
 
@@ -518,6 +524,11 @@ nav a:hover {
   padding-bottom: 1em;
 }
 
+input {
+  border: solid #6034B2 thick;
+  border-radius: 0.25rem;
+}
+
 .active {
   color: #6034B2;
 }
@@ -530,14 +541,24 @@ nav a:hover {
 
 .mediaImg {
   width: 300px;
-  max-height: 200px;
-  margin: 0.5rem;
+  height: 200px;
 }
 
-/* .box {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-} */
+@media only screen and (max-width: 47.9375em) {
+  .mediaImg {
+    margin-top: 35px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .mediaImg {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .mediaImg {
+    margin-top: 15px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

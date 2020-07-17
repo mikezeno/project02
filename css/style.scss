@@ -1,4 +1,27 @@
 @import "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
+
+/* Extra Small Only */
+@mixin extra-small-only {
+    @media only screen and (max-width : 48em - 0.0625) { 
+        @content;
+    }
+}
+
+/* Small Devices*/
+@mixin small-and-above {
+    @media only screen and (min-width : 48em) {
+        @content;
+    }
+}
+
+/* Medium devices */
+@mixin medium-and-above {
+    @media only screen and (min-width : 62em) {
+        @content;
+    }
+}
 
 /*Variables*/
 $purple: #6034B2 !default;
@@ -9,10 +32,15 @@ $darkGrey: #1A1A1A !default;
 
 $text-color: $white !default;
 $link-color: $purple !default;
+$primary-color: $black !default;
+$secondary-color: $darkGrey !default;
 
 /* Change all elements to use border-box */
 html {
     box-sizing: border-box;
+    padding:0;
+    margin:0; 
+    height:100%;
 }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -21,9 +49,12 @@ html {
 /*Base Styles*/
 body {
     color: $white;
-    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-weight: normal;
-    background-color: black;
+    background-color: $primary-color;
+    padding:0; 
+    margin:0; 
+    height:100%;
 }
 h1, h2, h3 {
     font-weight: bold;
@@ -34,7 +65,7 @@ a {
 
 /*Header*/
 header {
-    background: #1A1A1A;
+    background: $secondary-color;
     padding-top: 1rem;
     padding-bottom: 1rem;
     overflow: hidden;
@@ -43,16 +74,15 @@ header {
 }
 
 footer {
-    background: #1A1A1A;
-    padding-top: 1rem;
+    background: $secondary-color;
     padding-bottom: 1rem;
-    overflow: hidden;
-    display: flex;
+    margin-top: 5rem;
     align-items: center;
-    flex-shrink: none;
     bottom: 0;
+    left: 0; 
+    right: 0;
+    overflow:hidden;
     position: absolute;
-    width: 100%;
 }
 
 header::after {
@@ -61,24 +91,22 @@ header::after {
     clear: both;
 }
 
-/* Logo */
-.logo {
-    float: left;
-    width: 300px;
-    height: 100px;
-    display: flex;
+#logoCircle {
+    fill: $black
 }
 
-.logo-name {
-    float: left;
-    position: relative;
-    display: flex;    
-    top: 1.5rem;
-    /*left: -12rem; */
+/* Logo */
+#logoImg {
+    width: 150px;
+    height: 200px;
 }
-.logo img {
-    height: 100%;
+
+#logoTitle {
+    font-size: 2rem;
+    font-family: 'Coda Caption', sans-serif;
+    fill: $white;
 }
+
 
 /* Navigation */
 nav ul {
@@ -94,15 +122,15 @@ nav li {
 }
 
 nav a {
-    color: white;
     text-align: center;
     padding: 1rem 1rem;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 25px;
+    color: $white
 } 
 
-a:active {
+nav a:active {
     color: $purple;
 }
 
@@ -119,6 +147,11 @@ nav a:hover {
     padding-bottom: 1em;
 }
 
+input {
+    border: solid $purple thick;
+    border-radius: 0.25rem;
+}
+
 .active { 
     color: $purple; 
 }
@@ -129,16 +162,16 @@ nav a:hover {
     justify-content: space-around;
 }
 
-
 .mediaImg {
     width:300px;
-    max-height: 200px;
-    margin: 0.5rem;
+    height: 200px;
+    @include extra-small-only(){
+        margin-top: 35px;
+    }
+    @include small-and-above(){
+        margin-top: 25px;
+    }
+    @include medium-and-above(){
+        margin-top: 15px
+    }
 }
-
-/* .box {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-} */

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
 
+/*Media Queries*/
 /* Extra Small Only */
 @mixin extra-small-only {
     @media only screen and (max-width : 48em - 0.0625) { 
@@ -56,9 +57,11 @@ body {
     margin:0; 
     height:100%;
 }
+
 h1, h2, h3 {
     font-weight: bold;
 }
+
 a {
     font-weight: bold;
 }
@@ -66,23 +69,36 @@ a {
 /*Header*/
 header {
     background: $secondary-color;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     overflow: hidden;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
+/* Footer */
 footer {
     background: $secondary-color;
     padding-bottom: 1rem;
-    margin-top: 5rem;
     align-items: center;
     bottom: 0;
     left: 0; 
     right: 0;
-    overflow:hidden;
+    overflow: hidden;
     position: absolute;
+    width: 100%;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+
+#footer {
+   margin-top: 5rem;
 }
 
 header::after {
@@ -91,11 +107,11 @@ header::after {
     clear: both;
 }
 
+/* Logo */
 #logoCircle {
     fill: $black
 }
 
-/* Logo */
 #logoImg {
     width: 150px;
     height: 200px;
@@ -106,7 +122,6 @@ header::after {
     font-family: 'Coda Caption', sans-serif;
     fill: $white;
 }
-
 
 /* Navigation */
 nav ul {
@@ -138,6 +153,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/*Main layout*/
 .btn {
     background-color: $purple;
 }
@@ -156,6 +172,7 @@ input {
     color: $purple; 
 }
 
+/* GIF Output Images*/
 #gifOutput {
     display: flex;
     flex-wrap: wrap;

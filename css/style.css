@@ -406,6 +406,7 @@ textarea {
   /* 2 */
 }
 
+/*Media Queries*/
 /* Extra Small Only */
 /* Small Devices*/
 /* Medium devices */
@@ -444,23 +445,37 @@ a {
 /*Header*/
 header {
   background: #1A1A1A;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
+/* Footer */
 footer {
   background: #1A1A1A;
   padding-bottom: 1rem;
-  margin-top: 5rem;
   align-items: center;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   position: absolute;
+  width: 100%;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+  /* Footer height */
+}
+
+#footer {
+  margin-top: 5rem;
 }
 
 header::after {
@@ -469,11 +484,11 @@ header::after {
   clear: both;
 }
 
+/* Logo */
 #logoCircle {
   fill: #000000;
 }
 
-/* Logo */
 #logoImg {
   width: 150px;
   height: 200px;
@@ -515,6 +530,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/*Main layout*/
 .btn {
   background-color: #6034B2;
 }
@@ -533,6 +549,7 @@ input {
   color: #6034B2;
 }
 
+/* GIF Output Images*/
 #gifOutput {
   display: flex;
   flex-wrap: wrap;
